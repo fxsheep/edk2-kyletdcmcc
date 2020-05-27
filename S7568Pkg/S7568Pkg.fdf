@@ -23,7 +23,7 @@
 
 
 [FD.S7568_EFI]
-BaseAddress   = 0x80007DF8|gArmTokenSpaceGuid.PcdFdBaseAddress  #The base address of the FLASH Device.
+BaseAddress   = 0x00400000|gArmTokenSpaceGuid.PcdFdBaseAddress  #The base address of the FLASH Device.
 Size          = 0x000B0000|gArmTokenSpaceGuid.PcdFdSize         #The size in bytes of the FLASH Device
 ErasePolarity = 1
 BlockSize     = 0x1

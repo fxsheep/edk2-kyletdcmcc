@@ -308,7 +308,7 @@
 #
   gArmTokenSpaceGuid.PcdVFPEnabled|1
 
-  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x80000000
+  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x00000000
   gArmTokenSpaceGuid.PcdSystemMemorySize|0x08000000
 
   # Size of the region used by UEFI in permanent memory (Reserved 16MB)
