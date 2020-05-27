@@ -16,7 +16,7 @@
 ################################################################################
 [Defines]
   PLATFORM_NAME                  = S7568Pkg
-  PLATFORM_GUID                  = 91fa6c28-33df-46ac-aee6-292d6811ea31
+  PLATFORM_GUID                  = 2a48b64f-e064-4799-942c-deb57bbcb0d4
   PLATFORM_VERSION               = 0.1
   DSC_SPECIFICATION              = 0x00010005
   OUTPUT_DIRECTORY               = Build/$(PLATFORM_NAME)
@@ -29,7 +29,7 @@
 [LibraryClasses.common]
   ArmLib|ArmPkg/Library/ArmLib/ArmBaseLib.inf
   ArmMmuLib|ArmPkg/Library/ArmMmuLib/ArmMmuBaseLib.inf
-  ArmPlatformLib|S7568Pkg/Library/BeagleBoardLib/BeagleBoardLib.inf
+  ArmPlatformLib|S7568Pkg/Library/SC8810Lib/SC8810Lib.inf
   ArmPlatformStackLib|ArmPlatformPkg/Library/ArmPlatformStackLib/ArmPlatformStackLib.inf
   ArmSmcLib|ArmPkg/Library/ArmSmcLib/ArmSmcLib.inf
 
@@ -77,10 +77,7 @@
   CpuExceptionHandlerLib|ArmPkg/Library/ArmExceptionLib/ArmExceptionLib.inf
   PrePiLib|EmbeddedPkg/Library/PrePiLib/PrePiLib.inf
 
-  SerialPortLib|Silicon/TexasInstruments/Omap35xxPkg/Library/SerialPortLib/SerialPortLib.inf
   SemihostLib|ArmPkg/Library/SemihostLib/SemihostLib.inf
-
-  RealTimeClockLib|Silicon/TexasInstruments/Omap35xxPkg/Library/RealTimeClockLib/RealTimeClockLib.inf
 
   IoLib|MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic.inf
 
@@ -106,12 +103,7 @@
 
   CpuLib|MdePkg/Library/BaseCpuLib/BaseCpuLib.inf
 
-  TimerLib|Silicon/TexasInstruments/Omap35xxPkg/Library/Omap35xxTimerLib/Omap35xxTimerLib.inf
-  OmapLib|Silicon/TexasInstruments/Omap35xxPkg/Library/OmapLib/OmapLib.inf
-  OmapDmaLib|Silicon/TexasInstruments/Omap35xxPkg/Library/OmapDmaLib/OmapDmaLib.inf
-  DebugAgentTimerLib|Silicon/TexasInstruments/Omap35xxPkg/Library/DebugAgentTimerLib/DebugAgentTimerLib.inf
 
-  GdbSerialLib|Silicon/TexasInstruments/Omap35xxPkg/Library/GdbSerialLib/GdbSerialLib.inf
   ArmDisassemblerLib|ArmPkg/Library/ArmDisassemblerLib/ArmDisassemblerLib.inf
   DebugAgentLib|MdeModulePkg/Library/DebugAgentLibNull/DebugAgentLibNull.inf
   DmaLib|EmbeddedPkg/Library/NonCoherentDmaLib/NonCoherentDmaLib.inf
@@ -320,9 +312,6 @@
   gEmbeddedTokenSpaceGuid.PcdTimerPeriod|100000
   gEmbeddedTokenSpaceGuid.PcdEmbeddedPerformanceCounterPeriodInNanoseconds|77
   gEmbeddedTokenSpaceGuid.PcdEmbeddedPerformanceCounterFrequencyInHz|13000000
-
-  # OMAP Interrupt Controller
-  gEmbeddedTokenSpaceGuid.PcdInterruptBaseAddress|0x48200000
 
   gEfiMdePkgTokenSpaceGuid.PcdPlatformBootTimeOut|10
 
