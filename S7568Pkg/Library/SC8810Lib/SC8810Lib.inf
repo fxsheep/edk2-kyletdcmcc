@@ -1,0 +1,41 @@
+#/* @file
+#  Copyright (c) 2011-2012, ARM Limited. All rights reserved.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+#*/
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = SC8810Lib
+  FILE_GUID                      = 27000f76-cce0-4f82-b629-177810c16246
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = ArmPlatformLib
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  ArmPkg/ArmPkg.dec
+  ArmPlatformPkg/ArmPlatformPkg.dec
+
+[LibraryClasses]
+  ArmLib
+  DebugLib
+
+[Sources.common]
+  SC8810Lib.c
+  SC8810LibMem.c
+
+[Sources.Arm]
+  SC8810Helper.S    | GCC
+  SC8810Helper.asm  | RVCT
+
+[FixedPcd]
+  gArmTokenSpaceGuid.PcdFdBaseAddress
+  gArmTokenSpaceGuid.PcdFdSize
+
+  gArmTokenSpaceGuid.PcdSystemMemoryBase
+  gArmTokenSpaceGuid.PcdSystemMemorySize
+
+#  gEmbeddedTokenSpaceGuid.PcdInterruptBaseAddress

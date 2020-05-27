@@ -18,14 +18,14 @@
 
   IMPORT    ArmReadMpidr
 
-  AREA BeagleBoardHelper, CODE, READONLY
+  AREA SC8810Helper, CODE, READONLY
 
 //UINTN
 //ArmPlatformIsPrimaryCore (
 //  IN UINTN MpId
 //  );
 ArmPlatformIsPrimaryCore FUNCTION
-  // BeagleBoard has a single core. We must always return 1.
+  // SC8810 is single core. We must always return 1.
   mov   r0, #1
   bx    lr
   ENDFUNC
@@ -39,7 +39,7 @@ ArmPlatformPeiBootAction FUNCTION
 //  VOID
 //  );
 ArmPlatformGetPrimaryCoreMpId FUNCTION
-  // The BeagleBoard is a uniprocessor platform. The MPIDR of primary core is
+  // The SC8810 is a uniprocessor platform. The MPIDR of primary core is
   // always the MPIDR of the calling CPU.
   b     ArmReadMpidr
   ENDFUNC
