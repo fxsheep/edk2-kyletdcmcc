@@ -10,8 +10,8 @@
 
 [Defines]
   INF_VERSION                    = 0x0001001A
-  BASE_NAME                      = BeagleBoardPrePiUniCore
-  FILE_GUID                      = 8a5dc3de-fe31-4ad9-9c93-dd73626932e7
+  BASE_NAME                      = S7568PrePiUniCore
+  FILE_GUID                      = eeb67cde-5e7a-45ad-9916-291ef320f167
   MODULE_TYPE                    = SEC
   VERSION_STRING                 = 1.0
 
