@@ -1,0 +1,33 @@
+#/** @file
+# EDK Serial port lib
+#
+#  Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
+# Copyright (c) 2009, Apple Inc. All rights reserved.<BR>
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+#
+#**/
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = SerialPortLib
+  FILE_GUID                      = 207c9fe3-cb10-4cb4-877d-2b2c10205815
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = SerialPortLib
+
+
+[Sources.common]
+  UartSerialPortLib.c
+
+[LibraryClasses]
+  DebugLib
+  IoLib
+
+[Packages]
+  EmbeddedPkg/EmbeddedPkg.dec
+  MdePkg/MdePkg.dec
+  S7568Pkg/S7568Pkg.dec
+
+
